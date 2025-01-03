@@ -1,7 +1,9 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
 }
 
 .navbar {
@@ -49,7 +51,7 @@ html, body {
     /* box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); */
     gap: 1.5rem;
 
-  
+
 
     .closeButton {
       display: none;
@@ -79,31 +81,34 @@ html, body {
     .hamburger {
       display: block;
     }
-    .navList{
+
+    .navList {
       flex-direction: column;
-      transform: translateX(100%); /* Start off-screen */
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 60vw;
-    background-color: white;
-    padding: 2rem;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    gap: 1.5rem;
-    justify-content: flex-start;
-    
-    &.active {
-      transform: translateX(0); /* Slide into view */
-    }
+      transform: translateX(100%);
+      /* Start off-screen */
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 60vw;
+      background-color: white;
+      padding: 2rem;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      gap: 1.5rem;
+      justify-content: flex-start;
 
-    .closeButton{
-      display: block;
+      &.active {
+        transform: translateX(0);
+        /* Slide into view */
+      }
 
-    }
+      .closeButton {
+        display: block;
+
+      }
 
     }
   }
@@ -122,6 +127,8 @@ html, body {
   height: 80vh;
   width: 100%;
   position: relative;
+  margin-top: 50px;
+
 
   &::before {
     content: '';
@@ -199,17 +206,17 @@ html, body {
 
   .hero {
 
-    .content{
+    .content {
       padding: 0;
       margin: 0;
-  
-      h1{
+
+      h1 {
         font-size: 2rem;
       }
     }
   }
 
-  
+
 }
 
 
@@ -221,6 +228,8 @@ html, body {
   justify-content: center;
   text-align: center;
   color: #2d3748;
+  margin-top: 50px;
+
 
   h2 {
     font-size: 2rem;
@@ -273,6 +282,7 @@ html, body {
           padding: 10px;
 
         }
+
         div {
           font-weight: bold;
           color: #2c5282;
@@ -331,7 +341,7 @@ html, body {
     display: none;
   }
 
-  .content{
+  .content {
     min-width: 100vw;
     padding: 20px;
   }
@@ -345,7 +355,7 @@ html, body {
     padding: 10px;
     align-items: center;
 
-    .contentWrapper{
+    .contentWrapper {
       padding: 0;
       align-items: center;
     }
@@ -354,20 +364,20 @@ html, body {
       display: flex;
       flex-direction: column;
 
-      .section{
+      .section {
         margin-bottom: 10px;
       }
     }
 
-    .imageWrapper{
+    .imageWrapper {
       display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    border: 2px solid;
-    width: 70vw;
-    padding: 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      border: 2px solid;
+      width: 70vw;
+      padding: 10px;
     }
   }
 }
@@ -377,6 +387,8 @@ html, body {
 .skills {
   padding: 2.5rem 1.5rem;
   background-color: #f9fafb;
+  margin-top: 50px;
+
 
   .title {
     text-align: center;
@@ -517,7 +529,7 @@ html, body {
 @media (max-width: 768px) {
   .educationSection .timeline .educationItem {
     max-width: 90%;
-}
+  }
 }
 
 
@@ -526,6 +538,8 @@ html, body {
   flex-direction: column;
   position: relative;
   margin: 40px 0;
+  margin-top: 50px;
+
 
   .title {
     text-align: center;
@@ -551,7 +565,7 @@ html, body {
       align-items: center;
       position: relative;
       padding-right: 100px;
-      padding-bottom: 50px;
+      padding-bottom: 100px;
 
       .circle {
         position: absolute;
@@ -607,7 +621,7 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .timeline-container{
+  .timeline-container {
 
     .timeline-item {
       flex-direction: column;
@@ -615,12 +629,17 @@ html, body {
       .content {
         width: 100%;
         display: flex;
+        border-right: 0px;
         justify-content: center;
         align-items: center;
         position: relative;
         padding: 0;
 
-        .content-container{
+        .circle {
+          display: none;
+        }
+
+        .content-container {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -629,7 +648,7 @@ html, body {
         }
       }
 
-      .roleDescription{
+      .roleDescription {
         padding: 0;
         max-width: 100%;
 
@@ -641,23 +660,37 @@ html, body {
   }
 }
 
-  .title {
-    text-align: center;
-    font-size: 1.875rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
-    color: #1a202c;
-    width: 100%;
-    border-bottom: 2px solid black;
-    padding-bottom: 30px;
-  }
+.title {
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  color: #1a202c;
+  width: 100%;
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+}
 
 
 .swiper {
   width: 400px;
   height: 400px;
   padding: 50px;
+}
+
+.content-of-slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 15px;
+  }
 }
 
 .swiper-slide {
@@ -668,10 +701,11 @@ html, body {
   margin-bottom: 30px;
 }
 
-.slide-content{
+.slide-content {
   border: 2px solid;
 
 }
+
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -679,109 +713,102 @@ html, body {
 
 
 
-  // Custom Pagination Styles
+// Custom Pagination Styles
 
- 
-  
-    .custom-prev,
-    .custom-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #d92cf9;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      z-index: 10;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-      transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
-  
-    .custom-prev {
-      left: -25%; // Adjust position
-    }
-  
-    .custom-next {
-      right: -25%; // Adjust position
-    }
-    
-  
-  .custom-pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  
-    .swiper-pagination-bullet {
-      background-color: #ccc; // Default bullet color
-      margin: 5px 5px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      opacity: 0.7;
-      transition: all 0.3s ease;
-  
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-  
-    .swiper-pagination-bullet-active {
-      background-color: #d92cf9;// Active bullet color
-      opacity: 1;
-      transform: scale(1.3); // Active bullet scaling effect
-    }
+
+
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #d92cf9;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
   }
+}
 
-  .custom-slide {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #f064c1, #00d4ff);
-    color: white;
-    height: 300px; // Adjust the height as needed
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 20px;
+.custom-prev {
+  left: -25%; // Adjust position
+}
 
-    .logo{
-      width: 100%;
-      height: 70%
-    }
-  
-    .content {
-      text-align: center;
-      margin-top: 30px;
-  
-      h2 {
-        font-size: 24px;
-      }
-  
-      p {
-        font-size: 16px;
-      }
-    }
-  
-    // Add hover effects
+.custom-next {
+  right: -25%; // Adjust position
+}
+
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  .swiper-pagination-bullet {
+    background-color: #ccc; // Default bullet color
+    margin: 5px 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+
     &:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease-in-out;
+      transform: scale(1.2);
     }
   }
 
-  
+  .swiper-pagination-bullet-active {
+    background-color: #d92cf9; // Active bullet color
+    opacity: 1;
+    transform: scale(1.3); // Active bullet scaling effect
+  }
+}
 
+.custom-slide {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f064c1, #00d4ff);
+  color: white;
+  height: 300px; // Adjust the height as needed
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
 
+  .logo {
+    width: 100%;
+    height: 70%
+  }
 
+  .content {
+    text-align: center;
+    margin-top: 30px;
 
+    h2 {
+      font-size: 24px;
+    }
 
+    p {
+      font-size: 16px;
+    }
+  }
+
+  // Add hover effects
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+}

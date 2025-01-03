@@ -18,6 +18,14 @@ export default function PortfolioSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const swiperRef = useRef(null);
 
+  const aboutmeDivRef = useRef(null);
+  const certificationDivRef = useRef(null);
+  const educationDivRef = useRef(null);
+  const areaofskillsDivRef = useRef(null);
+  const experiencesDivRef = useRef(null);
+  const projectDivRef = useRef(null);
+
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -35,8 +43,8 @@ export default function PortfolioSection() {
 
   const Education = [
     {
-      degree: `Master's Degree`, session: 'Aug 2023 - May 2024', college: 'University Of Maryland', location: 'Washington, Us', Specialisation: 'Management Information Systems',
-      logo: '/MarylandLogo.png', Coursework: 'Data Analysis, Big Data Analysis, Machine Learning, DBMS'
+      degree: `Master's Degree`, session: 'Aug 2023 - May 2024', college: 'University of Mryland', location: 'College Park, MD', Specialisation: 'Management Information Systems',
+      logo: '/MarylandLogo.png', Coursework: 'Database Management Systems, Buisness Process Analysis, Data Mining & Predictive Analysis, Blockchain, AI, Machne Learning, Data Visualization, Cloud Computing'
     },
     {
       degree: 'Bachelor In Technology', session: '2019 - 2023', college: 'Medicaps University', location: 'Indore, India', Specialisation: 'Computer Science',
@@ -47,11 +55,26 @@ export default function PortfolioSection() {
 
   const Certifications = [
     {
-      name: 'Professional Solution Architect', session: 'May 2023', Technology: 'AWS', logo: '/aws.png',
-      Coursework: 'Data Structures and Algorithms, Database Management Systems (DBMS), Computer Networks, Operating System'
+      name: 'Amazon Web Serices Cloud Practitioner', session: 'Aug 2024', Technology: 'AWS', logo: '/aws.png',
+      Coursework: 'Cloud Computing Fundamentals, AWS Services and Architecture, Security and Compliance, Cost Management'
     },
-
+    {
+      name: 'Tableau Desktop Specialist', session: 'July 2024', Technology: 'Tableau', logo: '/tableau.png',
+      Coursework: 'Tableau Desktop Specialist: Visualization Skills, Data Integration, Analytical Insights, Dashboard Interactivity'
+    },
+    {
+      name: 'Accenture Data Analystics and Visualization', session: 'July 2024', Technology: 'Accenture', logo: '/accenture.jpg',
+      Coursework: 'Data Analysis and Visualization, Exploratory Data Analysis (EDA), Applying Machine Learning Algorithms, Utilizing Advanced Big Data Tools and Techniques'
+    }
   ];
+
+  const handleDownload = () => {
+    console.log(window.location.href);
+    const link = document.createElement("a");
+    link.href = `${window.location.href}Siddharth_Modi_Resume.pdf`; // Path to PDF
+    link.download = "Siddharth_Modi.pdf"; // File name
+    link.click();
+  };
 
   const zoomInVariants = {
     hidden: { scale: 0.5, opacity: 0 }, // Start scaled down with no opacity
@@ -67,24 +90,50 @@ export default function PortfolioSection() {
 
   const experiences = [
     {
-      role: "Solution Engineer",
-      organization: "Gammastack",
-      icon: '/gammastacklogo.png',
+      role: "Data Analyst Intern",
+      organization: "Strategic Solutions International",
+      icon: '/strategicSolutionsInternational.jpeg',
       descriptions: [
         {
-          text: `Developed and optimized sports betting and casino gaming
-                applications, ensuring high-performance frontends by leveraging React
-                best practices and advanced optimization techniques. This reduced
-                operational costs, including amplifier bills.`,
+          text: `Improved financial analysis by optimizing data pipelines and using relational databases, data warehousing, and DBT, which increased forecast accuracy by 20% and reduced retrieval time by 30% through SQL-based data manipulation and cleaning of balance sheets and cash flow data. `,
         },
         {
-          text: `Integrated and collaborated with third-party casino providers to
-          seamlessly onboard casino games and workflows into the system.`,
+          text: `Developed and deployed interactive dashboards with Power BI and Looker, leveraging DAX and LookML for financial KPIs, enhancing stakeholder decision-making efficiency by 25%.`,
         },
         {
-          text: `Played a key role in a team that managed and maintained live projects
-                serving over 10,000 active users, contributing as a full-stack engineer
-                ensure seamless user experiences and reliable system performance.`,
+          text: `Conducted detailed market research and A/B testing for financial models, utilizing SAP Business Objects for data management and reporting.`,
+        },
+      ],
+    },
+    {
+      role: "Data Scientist",
+      organization: "Jaideep Ispat & Alloys Pvt Limited",
+      icon: '/jaideep.png',
+      descriptions: [
+        {
+          text: `Extracted, cleansed, and integrated data from multiple sources to form large datasets, applying Random Forest to optimize production scheduling, thereby augmenting operational efficiency by 20%. `,
+        },
+        {
+          text: `Developed and deployed predictive models through regression analysis, anomaly detection techniques, and financial modeling, leveraging these techniques for production cost forecasts and resource allocation decisions, reducing defect rates by 25%`,
+        },
+        {
+          text: `Refined data integration through the utilization of Random Forest and K-means clustering, enhancing statistical data governance and ensuring robust data architecture via Python-based solutions.`,
+        },
+      ],
+    },
+    {
+      role: "Graduate Teaching Assistant",
+      organization: "University of Maryland",
+      icon: '/MarylandLogo.png',
+      descriptions: [
+        {
+          text: `Supported over 100 students in mastering concepts in Statistical Modeling, Linear Regression, and Machine Learning Algorithms, leveraging tools like Python, R, and MATLAB for practical demonstrations.`,
+        },
+        {
+          text: `Enhanced course materials by integrating 10+ real-world datasets and advanced techniques like data preprocessing, feature engineering, and model evaluation, leading to a 25% improvement in student project outcomes.`,
+        },
+        {
+          text: `Designed and implemented an automated grading system using Python and Jupyter Notebooks, reducing grading time by 40% while ensuring consistency and accuracy for over 50+ assignments and projects focused on machine learning workflows and statistical analysis.`,
         },
       ],
     },
@@ -93,12 +142,29 @@ export default function PortfolioSection() {
 
   const projects = [
     {
-      name: 'Bank Data Analysis',
-      image: '/gammastacklogo.png'
+      name: 'Homicide Analysis Data Analyst Project',
+      image: '/dataanalysis.jpg',
+      link: 'https://github.com/Siddharth180201/Homicide-Analysis-Data-Analyst-Project-'
     },
     {
-      name: 'Bank Data Analysis',
-      image: '/gammastacklogo.png'
+      name: 'Airline Delay Prediction',
+      image: '/datascience.jpg',
+      link: 'https://github.com/Siddharth180201/Airline-Delay-Prediction'
+    },
+    {
+      name: 'Belgium Economy Dashboard',
+      image: '/belgiumEconomy.jpg',
+      link: 'https://public.tableau.com/app/profile/siddharth.modi/viz/BelgiumsEconomy/Dashboard1'
+    },
+    {
+      name: 'Airline Routes Dashboard',
+      image: '/airline.png',
+      link: 'https://public.tableau.com/app/profile/siddharth.modi/viz/GlobalAirportandUSInternationalFlightRouteStudy_17268046020550/IntflightDashboard'
+    },
+    {
+      name: 'Salse Hr Dashboard',
+      image: '/sales.jpeg',
+      link: 'https://public.tableau.com/app/profile/siddharth.modi/viz/SalesDashboard_17359383336800/Dashboard1?publish=yes'
     }
   ]
 
@@ -146,19 +212,19 @@ export default function PortfolioSection() {
             <div className="closeButton" onClick={toggleMenu}>
               ✖
             </div>
-            <div className="navItem" data-scroll-to="aboutMe">
+            <div onClick={() => aboutmeDivRef.current.scrollIntoView({ behavior: "smooth" })} className="navItem" data-scroll-to="aboutMe">
               About Me
             </div>
-            <div className="navItem" data-scroll-to="education">
+            <div onClick={() => educationDivRef.current.scrollIntoView({ behavior: "smooth" })} className="navItem" data-scroll-to="education">
               Education
             </div>
-            <div className="navItem" data-scroll-to="skills">
+            <div onClick={() => areaofskillsDivRef.current.scrollIntoView({ behavior: "smooth" })} className="navItem" data-scroll-to="skills">
               Area of Skills
             </div>
-            <div className="navItem" data-scroll-to="experience">
+            <div onClick={() => experiencesDivRef.current.scrollIntoView({ behavior: "smooth" })} className="navItem" data-scroll-to="experience">
               Experience
             </div>
-            <div className="navItem" data-scroll-to="projects">
+            <div onClick={() => projectDivRef.current.scrollIntoView({ behavior: "smooth" })} className="navItem" data-scroll-to="projects">
               Projects
             </div>
           </div>
@@ -171,15 +237,15 @@ export default function PortfolioSection() {
             animate="visible" // Final animation state
             variants={zoomInVariants} // Apply the variants
           >
-            <h1>Rudra Mahajan</h1>
+            <h1>Siddharth Modi</h1>
             <p>I manipulate and play with ... data.</p>
-            <div className='resume-button'>
+            <div onClick={handleDownload} className='resume-button'>
               Download Resume
             </div>
           </motion.div>
           <div className='portfolioImage'></div>
         </header>
-        <section className='aboutMe'>
+        <section ref={aboutmeDivRef} className='aboutMe'>
           <h2>ABOUT ME</h2>
           <div className='contentWrapper'>
             <motion.div
@@ -189,10 +255,11 @@ export default function PortfolioSection() {
               transition={{ duration: 0.5 }}
             >
               <p className='intro'>
-                Hi, I am Shruti Gosain. I am a graduate student pursuing Master of Science in Information Management (MSIM) at the University of Illinois Urbana-Champaign, with a focus on Data Science and Machine Learning. I’m passionate about analyzing, managing, and visualizing data. I like to be a bridge between raw data and the valuable information it holds. I enjoy deciphering what the data is trying to tell us and turning it into something that drives decision making.
+                Hello! I’m Siddharth Modi, a forward-thinking data enthusiast with a Master's in Information Systems from the University of Maryland. My expertise lies at the intersection of data analytics, machine learning, and strategic decision-making. With hands-on experience as both a Data Scientist and Data Analyst, I’ve developed and implemented solutions that optimized operations, enhanced financial forecasting accuracy, and transformed data into actionable insights for business growth.
+                My technical arsenal includes Python, SQL, Tableau, Power BI, and advanced machine learning frameworks like TensorFlow and Scikit-learn.
               </p>
               <p className='hobby'>
-                Beyond coding and work, you’ll mostly find me outdoors playing football and swimming. I also enjoy sketching, watching Anime, enjoying sunsets, hiking, and working out. I strongly believe in the importance of diverse experiences beyond studying because learning comes from all aspects of life. I thrive on exploring new things, constantly seeking opportunities to learn and grow in every possible way!
+                I thrive on tackling complex challenges, from building predictive models that streamline production scheduling to crafting dynamic dashboards that empower stakeholders with real-time KPIs. When I’m not immersed in datasets, you can usually find me exploring new technologies, enjoying the outdoors, or plotting my next move to ruthlessly checkmate opponents on chess.com. (Don’t worry, I only use my predictive skills for good!)
               </p>
               <div className='links'>
                 <div className='section'>
@@ -224,8 +291,8 @@ export default function PortfolioSection() {
               <Image
                 src="/portfolioPersonImage.png"
                 alt="Shruti Gosain's profile picture"
-                width={300}
-                height={500}
+                width={1000}
+                height={1000}
                 className='image'
               />
               <div className='socialIcons'>
@@ -248,7 +315,7 @@ export default function PortfolioSection() {
             </motion.div>
           </div>
         </section>
-        <section className='educationSection'>
+        <section ref={educationDivRef} className='educationSection'>
           <h2>EDUCATION</h2>
           <div className='timeline'>
 
@@ -334,7 +401,7 @@ export default function PortfolioSection() {
 
           </div>
         </section>
-        <section className='skills'>
+        <section ref={areaofskillsDivRef} className='skills'>
           <h2 className='title'>Area of Expertise</h2>
           <div className='grid'>
             {skills.map((skill, index) => (
@@ -356,7 +423,7 @@ export default function PortfolioSection() {
         </section>
       </div>
 
-      <div className="timeline-container">
+      <div ref={experiencesDivRef} className="timeline-container">
         <h2 className='title'>professional experience</h2>
         {experiences.map((exp, index) => (
           <div
@@ -389,7 +456,7 @@ export default function PortfolioSection() {
 
 
 
-      <h2 className='title'>Projects</h2>
+      <h2 ref={projectDivRef} className='title'>Projects</h2>
       <Swiper
         effect={'flip'}
         grabCursor={true}
@@ -404,15 +471,15 @@ export default function PortfolioSection() {
         {
           projects.map((item, index) => {
             return (
-              <SwiperSlide key={index} className="custom-slide">
+              <SwiperSlide onClick={() => window.open(item?.link, "_blank")} key={index} className="custom-slide">
                 <Image
                   src={item.image}
                   alt="University of Mumbai Logo"
-                  width={200}
-                  height={200}
+                  width={450}
+                  height={450}
                   className='logo'
                 />
-                <div className="content">
+                <div className="content-of-slider">
                   <h2>{item.name}</h2>
                 </div>
               </SwiperSlide>
@@ -425,7 +492,7 @@ export default function PortfolioSection() {
         <button className="custom-next">❯</button>
       </Swiper>
 
-      <section className='educationSection'>
+      <section ref={certificationDivRef} className='educationSection'>
         <h2>Certifications</h2>
         <div className='timeline'>
 
