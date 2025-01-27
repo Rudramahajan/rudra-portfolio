@@ -31,21 +31,20 @@ export default function PortfolioSection() {
   };
 
   const skills = [
-    { name: 'Python Programming', percentage: 100 },
-    { name: 'Machine and Deep Learning', percentage: 90 },
-    { name: 'SQL', percentage: 90 },
-    { name: 'Data Visualization', percentage: 100 },
-    { name: 'Data Science', percentage: 100 },
-    { name: 'NLP', percentage: 80 },
-    { name: 'Data Analysis', percentage: 80 },
-    { name: 'Data Engineering', percentage: 90 },
+    { name: 'HTML', percentage: 80 },
+    { name: 'CSS', percentage: 80 },
+    { name: 'Javascript', percentage: 90 },
+    { name: 'React Js', percentage: 90 },
+    { name: 'React Native', percentage: 70 },
+    { name: 'Next Js', percentage: 80 },
+    { name: 'Node Js', percentage: 80 },
+    { name: 'Express Js', percentage: 80 },
+    { name: 'Postgress', percentage: 90 },
+    { name: 'Reddis', percentage: 80 },
+    { name: 'Docker', percentage: 70 },
   ];
 
   const Education = [
-    {
-      degree: `Master's Degree`, session: 'Aug 2023 - May 2024', college: 'University of Mryland', location: 'College Park, MD', Specialisation: 'Management Information Systems',
-      logo: '/MarylandLogo.png', Coursework: 'Database Management Systems, Buisness Process Analysis, Data Mining & Predictive Analysis, Blockchain, AI, Machne Learning, Data Visualization, Cloud Computing'
-    },
     {
       degree: 'Bachelor In Technology', session: '2019 - 2023', college: 'Medicaps University', location: 'Indore, India', Specialisation: 'Computer Science',
       logo: '/MedicapsLogo.png', Coursework: 'Data Structures and Algorithms, Database Management Systems (DBMS), Computer Networks, Operating System'
@@ -90,81 +89,44 @@ export default function PortfolioSection() {
 
   const experiences = [
     {
-      role: "Data Analyst Intern",
-      organization: "Strategic Solutions International",
-      icon: '/strategicSolutionsInternational.jpeg',
+      role: "Solution Engineer",
+      organization: "Gammastack",
+      icon: '/gammastacklogo.png',
       descriptions: [
         {
-          text: `Improved financial analysis by optimizing data pipelines and using relational databases, data warehousing, and DBT, which increased forecast accuracy by 20% and reduced retrieval time by 30% through SQL-based data manipulation and cleaning of balance sheets and cash flow data. `,
+          text: `Optimized the performance of sports betting and casino gaming applications by implementing advanced React best practices and performance optimization techniques, resulting in a 35% improvement in frontend speed and a 20% reduction in operational costs. `,
         },
         {
-          text: `Developed and deployed interactive dashboards with Power BI and Looker, leveraging DAX and LookML for financial KPIs, enhancing stakeholder decision-making efficiency by 25%.`,
+          text: `Collaborated with cross-functional teams and third-party casino providers to seamlessly onboard and integrate over 50 casino games, enhancing platform functionality and driving a 25% increase in user engagement across the system.`,
         },
         {
-          text: `Conducted detailed market research and A/B testing for financial models, utilizing SAP Business Objects for data management and reporting.`,
+          text: `Designed and maintained scalable full-stack solutions for live projects with 10,000+ active users, utilizing robust monitoring systems to achieve 99.9% uptime and proactively reducing system downtime by 15%, ensuring reliable performance and seamless user experiences.`,
         },
       ],
-    },
-    {
-      role: "Data Scientist",
-      organization: "Jaideep Ispat & Alloys Pvt Limited",
-      icon: '/jaideep.png',
-      descriptions: [
-        {
-          text: `Extracted, cleansed, and integrated data from multiple sources to form large datasets, applying Random Forest to optimize production scheduling, thereby augmenting operational efficiency by 20%. `,
-        },
-        {
-          text: `Developed and deployed predictive models through regression analysis, anomaly detection techniques, and financial modeling, leveraging these techniques for production cost forecasts and resource allocation decisions, reducing defect rates by 25%`,
-        },
-        {
-          text: `Refined data integration through the utilization of Random Forest and K-means clustering, enhancing statistical data governance and ensuring robust data architecture via Python-based solutions.`,
-        },
-      ],
-    },
-    {
-      role: "Graduate Teaching Assistant",
-      organization: "University of Maryland",
-      icon: '/MarylandLogo.png',
-      descriptions: [
-        {
-          text: `Supported over 100 students in mastering concepts in Statistical Modeling, Linear Regression, and Machine Learning Algorithms, leveraging tools like Python, R, and MATLAB for practical demonstrations.`,
-        },
-        {
-          text: `Enhanced course materials by integrating 10+ real-world datasets and advanced techniques like data preprocessing, feature engineering, and model evaluation, leading to a 25% improvement in student project outcomes.`,
-        },
-        {
-          text: `Designed and implemented an automated grading system using Python and Jupyter Notebooks, reducing grading time by 40% while ensuring consistency and accuracy for over 50+ assignments and projects focused on machine learning workflows and statistical analysis.`,
-        },
-      ],
-    },
+    }
 
   ];
 
   const projects = [
     {
-      name: 'Homicide Analysis Data Analyst Project',
-      image: '/dataanalysis.jpg',
-      link: 'https://github.com/Siddharth180201/Homicide-Analysis-Data-Analyst-Project-'
+      name: 'Live TicTacToe Backend',
+      image: '/tictactoe.png',
+      link: 'https://github.com/Rudramahajan/live-tictactoe-backend'
     },
     {
-      name: 'Airline Delay Prediction',
-      image: '/datascience.jpg',
-      link: 'https://github.com/Siddharth180201/Airline-Delay-Prediction'
+      name: 'Live TicTacToe Frontend',
+      image: '/tictactoe.png',
+      link: 'https://github.com/Rudramahajan/live-tictactoe-frontend'
     },
     {
-      name: 'Belgium Economy Dashboard',
-      image: '/belgiumEconomy.jpg',
-      link: 'https://public.tableau.com/app/profile/siddharth.modi/viz/BelgiumsEconomy/Dashboard1'
+      name: 'Bitsky.bet',
+      image: '/bitsky.png',
+      link: 'https://www.bitsky.bet/'
     },
     {
-      name: 'Airline Routes Dashboard',
-      image: '/airline.png',
-      link: 'https://public.tableau.com/app/profile/siddharth.modi/viz/GlobalAirportandUSInternationalFlightRouteStudy_17268046020550/IntflightDashboard'
-    },
-    {
-      name: 'Salse Hr Dashboard',
-      image: '/sales.jpeg',
-      link: 'https://public.tableau.com/app/profile/siddharth.modi/viz/SalesDashboard_17359383336800/Dashboard1?publish=yes'
+      name: 'LinkedIn Clone Backend',
+      image: '/linkedin.png',
+      link: 'https://github.com/Rudramahajan/linkedin-bakcend'
     }
   ]
 
@@ -237,8 +199,8 @@ export default function PortfolioSection() {
             animate="visible" // Final animation state
             variants={zoomInVariants} // Apply the variants
           >
-            <h1>Siddharth Modi</h1>
-            <p>I manipulate and play with ... data.</p>
+            <h1>Rudra Mahajan</h1>
+            <p>I Am Here To Proivde You ..... Solutions</p>
             <div onClick={handleDownload} className='resume-button'>
               Download Resume
             </div>
@@ -255,27 +217,21 @@ export default function PortfolioSection() {
               transition={{ duration: 0.5 }}
             >
               <p className='intro'>
-                Hello! I’m Siddharth Modi, a forward-thinking data enthusiast with a Master's in Information Systems from the University of Maryland. My expertise lies at the intersection of data analytics, machine learning, and strategic decision-making. With hands-on experience as both a Data Scientist and Data Analyst, I’ve developed and implemented solutions that optimized operations, enhanced financial forecasting accuracy, and transformed data into actionable insights for business growth.
-                My technical arsenal includes Python, SQL, Tableau, Power BI, and advanced machine learning frameworks like TensorFlow and Scikit-learn.
+                I’m Rudra Mahajan, a dedicated full-stack developer with a passion for transforming ideas into dynamic and efficient applications. I hold a B.Tech in Computer Science from Medicaps University, where I built a strong foundation in software development and problem-solving.
+                At Gammastack, I’ve been at the forefront of developing high-performance sports betting and casino platforms, collaborating with third-party providers and ensuring seamless user experiences for thousands of active users. From integrating complex workflows to optimizing frontends for real-time responsiveness, I enjoy diving deep into challenges to deliver impactful solutions.
               </p>
               <p className='hobby'>
-                I thrive on tackling complex challenges, from building predictive models that streamline production scheduling to crafting dynamic dashboards that empower stakeholders with real-time KPIs. When I’m not immersed in datasets, you can usually find me exploring new technologies, enjoying the outdoors, or plotting my next move to ruthlessly checkmate opponents on chess.com. (Don’t worry, I only use my predictive skills for good!)
+                Beyond my professional life, I’m a spirited cricketer who loves the thrill of a close match, and an amateur singer who (occasionally) hits the right notes. Whether it’s perfecting my cover drive or a karaoke rendition, I believe in living life with the same creativity and determination I bring to my code.
               </p>
               <div className='links'>
                 <div className='section'>
                   <div>Email</div>
-                  <a href="mailto:sgosain2@illinois.edu">sgosain2@illinois.edu</a>
-                </div>
-                <div className='section'>
-                  <div>Website</div>
-                  <a href="https://shrutigosain.com" target="_blank" rel="noopener noreferrer">
-                    shrutigosain.com
-                  </a>
+                  <a href="mailto:sgosain2@illinois.edu">mahajanrudra955@gmail.com</a>
                 </div>
                 <div className='section'>
                   <div>LinkedIn</div>
-                  <a href="https://linkedin.com/in/shruti-gosain" target="_blank" rel="noopener noreferrer">
-                    shruti.gosain
+                  <a href="https://www.linkedin.com/in/rudra-mahajan-41a896235/" target="_blank" rel="noopener noreferrer">
+                    Rudra Mahajan
                   </a>
                 </div>
               </div>
@@ -289,32 +245,24 @@ export default function PortfolioSection() {
               transition={{ duration: 0.5 }}
             >
               <Image
-                src="/portfolioPersonImage.png"
-                alt="Shruti Gosain's profile picture"
+                src="/portfolioPersonImageasa.png"
+                alt="Rudra Mahajan's profile picture"
                 width={1000}
                 height={1000}
                 className='image'
               />
               <div className='socialIcons'>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Rudramahajan" target="_blank" rel="noopener noreferrer">
                   <FaGithub size={20} />
                 </a>
-                <a href="https://medium.com" target="_blank" rel="noopener noreferrer">
-                  <FaMedium size={20} />
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                  <FaTwitter size={20} />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/rudra-mahajan-41a896235/" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin size={20} />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram size={20} />
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
+
         <section ref={educationDivRef} className='educationSection'>
           <h2>EDUCATION</h2>
           <div className='timeline'>
@@ -454,8 +402,6 @@ export default function PortfolioSection() {
         ))}
       </div>
 
-
-
       <h2 ref={projectDivRef} className='title'>Projects</h2>
       <Swiper
         effect={'flip'}
@@ -491,85 +437,9 @@ export default function PortfolioSection() {
         <button className="custom-prev">❮</button>
         <button className="custom-next">❯</button>
       </Swiper>
-
-      <section ref={certificationDivRef} className='educationSection'>
-        <h2>Certifications</h2>
-        <div className='timeline'>
-
-          {
-            Certifications.map((item, index) => {
-              return (
-                <div key={index} className="educationItem">
-                  <motion.div
-                    className="date"
-                    initial={{ y: 20, opacity: 0 }} // Start below and invisible
-                    whileInView={{ y: 0, opacity: 1 }} // Slide up and become visible
-                    transition={{ duration: 0.5, delay: 0.5 }} // Delay for sequential animation
-                    viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-                  >
-                    {item.session}
-                  </motion.div>
-
-                  <motion.div
-                    className="details"
-                    initial={{ y: 20, opacity: 0 }} // Start below and invisible
-                    whileInView={{ y: 0, opacity: 1 }} // Slide up and become visible
-                    transition={{ duration: 0.5, delay: 0.5 }} // Delay for sequential animation
-                    viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-                  >
-                    <motion.h3
-                      initial={{ y: 20, opacity: 0 }} // Start below and invisible
-                      whileInView={{ y: 0, opacity: 1 }} // Slide up and become visible
-                      transition={{ duration: 0.5, delay: 0.5 }} // Delay for sequential animation
-                      viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-                    >
-                      {item.name}
-                    </motion.h3>
-                    <motion.p
-                      initial={{ y: 20, opacity: 0 }} // Start below and invisible
-                      whileInView={{ y: 0, opacity: 1 }} // Slide up and become visible
-                      transition={{ duration: 0.5, delay: 0.5 }} // Delay for sequential animation
-                      viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-                    >
-                      {item.Technology}
-                    </motion.p>
-
-                    <div className="university">
-                      <motion.div
-                        initial={{ y: 20, opacity: 0 }} // Start below and invisible
-                        whileInView={{ y: 0, opacity: 1 }} // Slide up and become visible
-                        transition={{ duration: 0.5, delay: 0.5 }} // Delay for sequential animation
-                        viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-                      >
-                        <Image
-                          src={item.logo}
-                          alt="University of Mumbai Logo"
-                          width={100}
-                          height={50}
-                          className="logo"
-                        />
-                      </motion.div>
+      <div className='div-space' />
 
 
-                    </div>
-
-                    <motion.p
-                      initial={{ y: 20, opacity: 0 }} // Start below and invisible
-                      whileInView={{ y: 0, opacity: 1 }} // Slide up and become visible
-                      transition={{ duration: 0.5, delay: 0.5 }} // Delay for sequential animation
-                      viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
-                    >
-                      <strong>Details:</strong> {item.Coursework}
-                    </motion.p>
-                  </motion.div>
-                </div>
-
-              )
-            })
-          }
-
-        </div>
-      </section>
 
     </>
   );

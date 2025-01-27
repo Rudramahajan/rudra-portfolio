@@ -143,7 +143,7 @@ body {
   .portfolioImage {
     width: 60%;
     height: 100%;
-    background: url('../../../public/portfolioPersonImage.png') center center / cover no-repeat;
+    background: url('../../../public/portfolioPersonImageasa.png') center center / cover no-repeat;
   }
 
   .content {
@@ -754,6 +754,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  margin-bottom: 20px;
 
   .swiper-pagination-bullet {
     background-color: #ccc; // Default bullet color
@@ -811,4 +812,8 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
   }
+}
+
+.div-space{
+  min-height: 50px;
 }
