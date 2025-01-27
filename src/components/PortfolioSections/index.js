@@ -70,8 +70,8 @@ export default function PortfolioSection() {
   const handleDownload = () => {
     console.log(window.location.href);
     const link = document.createElement("a");
-    link.href = `${window.location.href}Siddharth_Modi_Resume.pdf`; // Path to PDF
-    link.download = "Siddharth_Modi.pdf"; // File name
+    link.href = `${window.location.href}Rudra_resume.pdf`; // Path to PDF
+    link.download = "Rudra_Mahajan.pdf"; // File name
     link.click();
   };
 
