@@ -200,7 +200,7 @@ export default function PortfolioSection() {
             variants={zoomInVariants} // Apply the variants
           >
             <h1>Rudra Mahajan</h1>
-            <p>I Am Here To Proivde You ..... Solutions</p>
+            <p>I Am Here To Provide You ..... Solutions</p>
             <div onClick={handleDownload} className='resume-button'>
               Download Resume
             </div>
